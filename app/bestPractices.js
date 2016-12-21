@@ -7,15 +7,21 @@ exports = (typeof window === 'undefined') ? global : window;
  */
 
 exports.bestPracticesAnswers = {
-  globals : function() {
-    myObject = {
-      name : 'Jory'
-    };
+    globals : function() {
 
-    return myObject;
-  },
 
-  identity : function(val1, val2) {
+        return (function () {
+            myObject = {
+                name: 'Jory'
+            };
+        })
 
-  }
+
+
+
+    },
+
+    identity : function(val1, val2) {
+        return val1 === val2;
+    }
 };
